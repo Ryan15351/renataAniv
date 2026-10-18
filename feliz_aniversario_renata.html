@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d2b">
+<title>Feliz aniversário, Renata! ✨</title>
+<style>
+  :root{
+    --night:#100d2b; --purple:#6d4bd1; --violet:#a78bfa; --gold:#ffd778;
+    --cream:#fff7e6; --cyan:#7ee7f2; --pink:#ff9bcf;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; min-height:100vh; overflow-x:hidden; color:var(--cream);
+    font-family: ui-rounded, "Trebuchet MS", system-ui, -apple-system, sans-serif;
+    background:
+      radial-gradient(ellipse at 15% 15%, #38266e 0, transparent 38%),
+      radial-gradient(ellipse at 85% 45%, #18395d 0, transparent 35%),
+      linear-gradient(145deg,#090817,#171039 55%,#071a2d);
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;z-index:0;
+    background-image:radial-gradient(2px 2px at 20px 30px,#fff 50%,transparent 55%),
+      radial-gradient(1px 1px at 90px 80px,#b8c8ff 50%,transparent 55%),
+      radial-gradient(1.5px 1.5px at 150px 130px,#fff 50%,transparent 55%);
+    background-size:190px 170px,230px 210px,280px 240px;
+    animation:starDrift 45s linear infinite;
+  }
+  @keyframes starDrift{to{background-position:190px 170px,-230px 210px,280px -240px}}
+  .page{position:relative;z-index:1;max-width:1100px;margin:auto;padding:24px 20px 56px}
+  header{text-align:center;padding:34px 0 22px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff30;background:#ffffff0b;padding:8px 14px;border-radius:999px;color:#e6d9ff;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-size:clamp(2.7rem,8vw,5.8rem);line-height:.98;margin:22px 0 16px;letter-spacing:-.055em}
+  h1 .name{display:block;color:var(--gold);text-shadow:0 0 28px #ffc95b44}
+  .subtitle{max-width:670px;margin:0 auto;color:#ded9f4;font-size:clamp(1rem,2.6vw,1.22rem);line-height:1.7}
+  .hero-art{height:190px;position:relative;display:flex;align-items:center;justify-content:center;margin:12px auto 20px;max-width:600px}
+  .moon{position:absolute;width:118px;height:118px;border-radius:50%;background:linear-gradient(135deg,#fff5c9,#e8b9ff);box-shadow:0 0 50px #d5b6ff55;right:18%;top:20px;opacity:.9}
+  .book{position:absolute;left:20%;bottom:23px;font-size:3.5rem;transform:rotate(-13deg);filter:drop-shadow(0 8px 15px #0008);animation:float 4s ease-in-out infinite}
+  .flask{position:absolute;right:20%;bottom:20px;font-size:3.4rem;filter:drop-shadow(0 8px 15px #0008);animation:float 3.3s ease-in-out infinite reverse}
+  .wand{font-size:5rem;z-index:1;transform:rotate(-27deg);filter:drop-shadow(0 0 15px #ffe49b);animation:wandGlow 2s ease-in-out infinite}
+  @keyframes float{50%{transform:translateY(-13px) rotate(5deg)}}
+  @keyframes wandGlow{50%{filter:drop-shadow(0 0 24px #fff0a8) brightness(1.25)}}
+  .spark{position:absolute;color:var(--gold);font-size:1.3rem;animation:twinkle 1.7s ease-in-out infinite}
+  .s1{left:28%;top:30px}.s2{right:31%;top:10px;animation-delay:.6s}.s3{left:38%;bottom:10px;animation-delay:1s}
+  @keyframes twinkle{50%{opacity:.25;transform:scale(.65) rotate(25deg)}}
+  .panel{border:1px solid #ffffff25;background:linear-gradient(135deg,#ffffff12,#ffffff06);backdrop-filter:blur(12px);border-radius:26px;padding:clamp(20px,4vw,34px);box-shadow:0 18px 60px #0002}
+  .intro{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0 24px}
+  .mini-card{padding:22px;border-radius:20px;background:#120f2f99;border:1px solid #ffffff18}
+  .mini-card .emoji{font-size:2rem}
+  h2{font-size:clamp(1.45rem,4vw,2rem);margin:10px 0 12px}
+  .mini-card p,.message-intro{color:#d9d5ee;line-height:1.7;margin:0}
+  .section-title{text-align:center;margin:42px 0 8px}
+  .section-desc{text-align:center;color:#c7c1e1;margin:0 auto 24px;max-width:620px;line-height:1.6}
+  .buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  button{font:inherit;cursor:pointer;touch-action:manipulation}
+  .magic-button{
+    min-height:76px;text-align:left;display:flex;align-items:center;gap:14px;padding:16px 18px;
+    color:var(--cream);border:1px solid #ffffff25;border-radius:18px;
+    background:linear-gradient(115deg,#6d4bd133,#ffffff08);transition:transform .2s,border-color .2s,background .2s;
+  }
+  .magic-button:hover,.magic-button:focus-visible{transform:translateY(-3px);border-color:#ffd77899;background:linear-gradient(115deg,#6d4bd166,#ffffff10);outline:none}
+  .magic-button .icon{font-size:1.8rem;flex-shrink:0}
+  .magic-button strong{display:block;font-size:1rem;margin-bottom:4px}
+  .magic-button small{display:block;color:#c9c2e6;font-size:.85rem;line-height:1.4}
+  .message-box{display:none;margin-top:18px;padding:22px;border-radius:18px;border:1px solid #ffd77855;background:linear-gradient(135deg,#ffd77813,#a78bfa12);animation:reveal .45s ease both}
+  .message-box.visible{display:block}
+  .message-box h3{margin:0 0 10px;color:var(--gold);font-size:1.25rem}
+  .message-box p{margin:0;color:#f2eefa;line-height:1.8;white-space:pre-line}
+  @keyframes reveal{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .science-zone{margin-top:28px;text-align:center;overflow:hidden}
+  .science-zone p{color:#d9d5ee;line-height:1.7}
+  .launch-button{border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(100deg,#ffd778,#ffb5dc);color:#24163c;font-weight:800;box-shadow:0 8px 25px #ffcb7133;transition:transform .2s}
+  .launch-button:hover{transform:scale(1.04)}
+  .equation{font-family:ui-monospace,monospace;color:var(--cyan);font-size:clamp(1rem,3vw,1.3rem);margin:18px 0;min-height:2rem}
+  .particles{height:0;position:relative}
+  .particle{position:fixed;z-index:10;pointer-events:none;font-size:1.4rem;animation:rise 1.8s ease-out forwards}
+  @keyframes rise{0%{transform:translateY(0) scale(.6) rotate(0);opacity:1}100%{transform:translateY(-170px) scale(1.3) rotate(100deg);opacity:0}}
+  footer{text-align:center;color:#aaa3ce;font-size:.9rem;margin-top:34px;line-height:1.7}
+  footer span{color:var(--pink)}
+  .modal-backdrop{display:none;position:fixed;inset:0;z-index:20;background:#080615c9;backdrop-filter:blur(8px);padding:20px;align-items:center;justify-content:center}
+  .modal-backdrop.open{display:flex}
+  .modal{width:min(520px,100%);padding:28px;border-radius:24px;background:#191337;border:1px solid #ffd77866;box-shadow:0 25px 90px #0009;animation:reveal .3s ease}
+  .modal h2{color:var(--gold);margin-top:0}
+  .modal p{line-height:1.8;color:#e9e3f8}
+  .close{float:right;border:1px solid #ffffff30;border-radius:50%;width:38px;height:38px;background:#ffffff0b;color:white;font-size:1.25rem}
+  @media(max-width:620px){
+    .page{padding:15px 14px 36px}header{padding-top:22px}.hero-art{height:150px}
+    .moon{width:88px;height:88px;right:20%;top:17px}.book{font-size:2.7rem;left:10%;bottom:20px}.flask{font-size:2.7rem;right:10%;bottom:18px}.wand{font-size:4rem}
+    .intro{grid-template-columns:1fr}.buttons{grid-template-columns:1fr}.magic-button{min-height:70px}
+    .panel{border-radius:21px}.mini-card{padding:19px}
+  }
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <div class="eyebrow">✦ Um dia extraordinário no universo ✦</div>
+    <h1>Feliz aniversário,<span class="name">Renata!</span></h1>
+    <p class="subtitle">Hoje o universo se reuniu, fez alguns cálculos improváveis e decidiu que o mundo precisava comemorar você. E, sinceramente? A ciência está certa. ✨</p>
+    <div class="hero-art" aria-hidden="true">
+      <div class="moon"></div><span class="book">📖</span><span class="wand">🪄</span><span class="flask">🧪</span>
+      <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="intro">
+      <article class="mini-card">
+        <div class="emoji">🧙‍♀️</div>
+        <h2>Uma bruxa extraordinária</h2>
+        <p>Se Hogwarts estivesse procurando alguém especial, seu nome estaria escrito em uma carta entregue por uma coruja — provavelmente com glitter e uma observação dizendo: “essa aqui é das boas”.</p>
+      </article>
+      <article class="mini-card">
+        <div class="emoji">🧠</div>
+        <h2>Uma mente brilhante</h2>
+        <p>Sheldon poderia tentar calcular o quanto você é incrível, mas provavelmente precisaria de um quadro branco, 17 equações e ainda chegaria à conclusão: “Bazinga… você é única!”.</p>
+      </article>
+    </div>
+
+    <h2 class="section-title">Escolha sua magia de aniversário</h2>
+    <p class="section-desc">Cada botão guarda uma mensagem especial. Clique e desbloqueie uma dose de carinho, magia e ciência — sem precisar passar nos NOMs nem defender uma tese.</p>
+    <div class="buttons">
+      <button class="magic-button" data-message="carta"><span class="icon">🦉</span><span><strong>Uma carta de Hogwarts</strong><small>Uma mensagem com magia e carinho</small></span></button>
+      <button class="magic-button" data-message="bazinga"><span class="icon">🖖</span><span><strong>Protocolo Bazinga</strong><small>Uma descoberta cientificamente incrível</small></span></button>
+      <button class="magic-button" data-message="patrono"><span class="icon">✨</span><span><strong>Expecto Patronum!</strong><small>Um feitiço para iluminar seu novo ciclo</small></span></button>
+      <button class="magic-button" data-message="formula"><span class="icon">🔬</span><span><strong>A fórmula da Renata</strong><small>Uma equação que só você consegue resolver</small></span></button>
+    </div>
+    <div id="messageBox" class="message-box" role="status" aria-live="polite">
+      <h3 id="messageTitle"></h3><p id="messageText"></p>
+    </div>
+
+    <div class="science-zone">
+      <h2>Experimento especial: felicidade em expansão</h2>
+      <p>Os cientistas ainda não sabem explicar como alguém pode ser tão importante. Então vamos fazer o que qualquer equipe de pesquisa faria: apertar o botão e observar a magia.</p>
+      <div class="equation" id="equation">H = carinho² + risadas + Renata</div>
+      <button class="launch-button" id="experimentButton">🚀 Iniciar experimento</button>
+    </div>
+  </section>
+  <footer>
+    Feito com carinho para uma irmã que merece uma galáxia inteira de coisas boas.<br>
+    Que seu novo ano seja cheio de <span>magia, descobertas, risadas</span> e momentos dignos de uma maratona das suas séries favoritas. 💜
+  </footer>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="close" id="closeModal" aria-label="Fechar mensagem">×</button>
+    <h2 id="modalTitle">Resultado do experimento</h2>
+    <p id="modalText"></p>
+    <button class="launch-button" id="celebrateAgain">✨ Mais uma dose de magia</button>
+  </div>
+</div>
+<script>
+  const messages = {
+    carta: {
+      title: "📜 Querida Renata,",
+      text: "Temos o prazer de informar que você foi oficialmente aceita na Escola de Magia e Bruxaria da vida! Sua matéria principal será Encantamento de Pessoas, sua especialidade será espalhar alegria e sua missão será continuar sendo essa pessoa maravilhosa.\\n\\nLembre-se: não existe feitiço mais poderoso do que ser você mesma. Feliz aniversário! 🪄"
+    },
+    bazinga: {
+      title: "🧪 Resultado revisado por Sheldon (quase!)",
+      text: "Após rigorosos cálculos, uma quantidade questionável de café e uma discussão sobre a melhor ordem para assistir às séries, chegamos a uma conclusão: a probabilidade de você merecer um aniversário incrível é de 100%.\\n\\nA margem de erro é zero. A hipótese foi comprovada. Bazinga! E feliz aniversário, irmã! 🖖"
+    },
+    patrono: {
+      title: "✨ Expecto Patronum!",
+      text: "Que neste novo ciclo seu Patrono espante os dias difíceis, ilumine os caminhos confusos e traga para perto tudo o que faz seu coração feliz. Que nunca faltem coragem para recomeçar, amigos para rir junto e motivos para acreditar em coisas extraordinárias.\\n\\nVocê merece uma felicidade tão grande que nem o maior dos dementadores conseguiria apagar. 💫"
+    },
+    formula: {
+      title: "🔭 A fórmula secreta da Renata",
+      text: "Renata = (bondade × coragem) + inteligência + risadas³ + uma pitada de caos genial.\\n\\nConclusão científica: fórmula única, impossível de replicar e de valor incalculável. Não tente substituir nenhum componente — especialmente você! Que seu próximo capítulo seja cheio de descobertas incríveis e momentos felizes. 💜"
+    }
+  };
+  const box = document.getElementById("messageBox");
+  document.querySelectorAll("[data-message]").forEach(button => {
+    button.addEventListener("click", () => {
+      const item = messages[button.dataset.message];
+      document.getElementById("messageTitle").textContent = item.title;
+      document.getElementById("messageText").textContent = item.text.replace(/\\n/g, "\n");
+      box.classList.remove("visible");
+      void box.offsetWidth;
+      box.classList.add("visible");
+      box.scrollIntoView({behavior:"smooth",block:"nearest"});
+      burst(button.getBoundingClientRect().left + button.offsetWidth/2, button.getBoundingClientRect().top, 8);
+    });
+  });
+
+  const equations = [
+    "H = carinho² + risadas + Renata",
+    "Alegria = (amizade × amor)ⁿ",
+    "E = mc²… mas E também é Energia da Renata!",
+    "P(felicidade) = 1,000000 ✨",
+    "Conclusão: Renata é simplesmente extraordinária!"
+  ];
+  let experimentCount = 0;
+  const backdrop = document.getElementById("modalBackdrop");
+  function runExperiment(){
+    experimentCount++;
+    document.getElementById("equation").textContent = equations[experimentCount % equations.length];
+    document.getElementById("modalText").textContent = [
+      "Experimento concluído! Detectamos níveis extraordinários de carinho no ambiente. A recomendação do laboratório é: sorrir bastante, comer algo gostoso e aproveitar cada segundo do seu dia. Feliz aniversário, Renata! 🎂",
+      "Nova descoberta: o universo fica muito mais interessante com você nele. As leituras estão fora da escala e toda a equipe científica recomenda um ano repleto de sonhos realizados, saúde, amor e gargalhadas. 🪐",
+      "ALERTA: concentração de felicidade acima do limite permitido! A única solução conhecida é comemorar, receber abraços e continuar espalhando esse brilho por aí. Você é uma raridade cósmica! 💜"
+    ][experimentCount % 3];
+    backdrop.classList.add("open");
+    burst(window.innerWidth/2, window.innerHeight*.7, 30);
+  }
+  document.getElementById("experimentButton").addEventListener("click", runExperiment);
+  document.getElementById("celebrateAgain").addEventListener("click", () => {
+    backdrop.classList.remove("open");
+    runExperiment();
+  });
+  document.getElementById("closeModal").addEventListener("click", () => backdrop.classList.remove("open"));
+  backdrop.addEventListener("click", e => {if(e.target === backdrop) backdrop.classList.remove("open")});
+  document.addEventListener("keydown", e => {if(e.key === "Escape") backdrop.classList.remove("open")});
+
+  function burst(x,y,count){
+    const symbols = ["✨","⭐","🪄","⚛️","💜","🧪","✦"];
+    for(let i=0;i<count;i++){
+      const p = document.createElement("span");
+      p.className = "particle";
+      p.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      p.style.left = (x + (Math.random()-.5)*150) + "px";
+      p.style.top = (y + (Math.random()-.5)*30) + "px";
+      p.style.animationDelay = (Math.random()*.25) + "s";
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 2200);
+    }
+  }
+</script>
+</body>
+</html>
